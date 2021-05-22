@@ -1,8 +1,8 @@
 
-.card-post
-  - default_cover = "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
-  %img(src="#{post.cover ? post.cover : default_cover}")
-  .card-post-infos
-    %h2= post.title
-    %p= post.preview
-    %p= "by: #{post.author_name}"
+%a(href="#{post_path(post)}" style="text-decoration: none;")
+  .card-post
+    %img(src="#{post.cover ? post.cover : sample_watch_image}")
+    .card-post-infos
+      %h2= post.title
+      %p= post.preview
+      %p= "by: #{post.author_name }"
