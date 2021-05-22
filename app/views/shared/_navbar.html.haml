@@ -5,6 +5,12 @@
     %span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
     %ul.navbar-nav.mr-auto
+      %li.nav-item
+        = link_to 'Posts', posts_path, class: "nav-link"
+      %li.nav-item
+        = link_to 'Sponsor Posts', sponsors_posts_path, class: "nav-link"
+      %li.nav-item
+        = link_to 'Create a Post', new_post_path, class: "nav-link"
       - if user_signed_in?
         %li.nav-item.active
           = link_to "Home", "#", class: "nav-link"

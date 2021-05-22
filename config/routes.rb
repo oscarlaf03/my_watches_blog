@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'posts#index'
 
   get 'users/:handle', to: 'users#show', as: :user, constraints: { :handle => %r{[^\/]+} }
-  get 'posts/partners', to: 'remote_posts#index'
+  get 'sponsors/posts', to: 'remote_posts#index'
 
 
 end
