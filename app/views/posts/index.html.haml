@@ -5,18 +5,13 @@
     %tr
       %th Title
       %th Content
-      %th Cover
       %th User
-      %th
-      %th
-      %th
 
   %tbody
     - @posts.each do |post|
       %tr
         %td= post.title
         %td= post.preview
-        %td= post.cover
         %td= post.author.name
         %td= link_to 'Show', post
         %td= link_to 'Edit', edit_post_path(post)
