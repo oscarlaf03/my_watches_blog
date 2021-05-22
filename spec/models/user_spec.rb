@@ -34,6 +34,12 @@ RSpec.describe User, type: :model do
       expect(user).not_to be_valid
     end
 
+    it "should reject user without handler that is already taken" do
+      old_user = create(:user)
+      new_user = build(:user, handle: old_user.handle)
+      expect(new_user).not_to be_valid
+    end
+
   end
 
 
