@@ -1,7 +1,7 @@
 
 %a(href="#{post[:url]}" style="text-decoration: none;" target="_blank")
   .card-post
-    %img(src="#{post[:cover] ? post[:cover] : sample_watch_image}")
+    %img(src="#{post[:cover].present? ? post[:cover] : sample_watch_image}")
     .card-post-infos
       %h2= post[:title]
       %p= post[:preview]
