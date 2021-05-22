@@ -3,10 +3,11 @@ class UsersController < ApplicationController
 
 
   def index
-    @users = User.all
+    @users = policy_scope(User)
   end
 
   def show
+    authorize @user
     @user.increment_profile_views_by_one
   end
 
