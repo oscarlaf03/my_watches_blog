@@ -24,6 +24,7 @@ gem 'redis', '~> 4.0'
 
 gem "haml-rails", "~> 2.0"
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem "pundit"
 
 
 # Use Active Storage variant
