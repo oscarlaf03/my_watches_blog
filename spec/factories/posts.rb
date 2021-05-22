@@ -1,8 +1,9 @@
 FactoryBot.define do
   factory :post do
-    title { "MyString" }
-    content { "MyString" }
+    title { Faker::Hipster.sentence(word_count: 3) }
+    content { Faker::Hipster.paragraph_by_chars(characters: 256, supplemental: false) + " " + Faker::Hipster.paragraph_by_chars(characters: 256, supplemental: false) }
     cover { "MyString" }
-    user { nil }
+    author
   end
 end
+
