@@ -4,6 +4,10 @@
   %b Title:
   = @post.title
 %p
+  %b Views:
+  = @post.reload.views
+
+%p
   %b Content:
   = @post.content
 %p
