@@ -4,7 +4,7 @@ FactoryBot.create(:user, email: 'user@user.com') unless User.find_by(email: 'use
 
 User.all.each do |user|
   unless user.posts.present?
-    4.times do
+    16.times do
       FactoryBot.create(:post, author: user)
     end
   end
