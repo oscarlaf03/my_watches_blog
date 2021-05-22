@@ -13,6 +13,10 @@ class Post < ApplicationRecord
     word_count / HUMAN_AVERAGE_WORDS_READ_PER_MINUTE
   end
 
+  def increment_views_by_one
+    self.update(views: self.views + 1)
+  end
+
   private
 
   HUMAN_AVERAGE_WORDS_READ_PER_MINUTE = 250.0
@@ -22,5 +26,4 @@ class Post < ApplicationRecord
     content.split(' ').size.to_f
   end
 
-  
 end
