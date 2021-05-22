@@ -5,4 +5,8 @@ class Post < ApplicationRecord
     content.truncate(46, sperator: ' ')
   end
 
+  def author_name
+    author.name if author
+  end
+
 end
