@@ -1,4 +1,5 @@
-%h1 RemotePosts#index
-%p Find me in app/views/remote_posts/index.html.haml
+.container.posts-container
+  %h1 Checkout some of our sponsors external content
+  - @remote_posts.each do |post|
+    = render partial: "shared/cards/remote_post_card", locals: {post: post}
 
-= @remote_posts.size

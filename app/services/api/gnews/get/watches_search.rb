@@ -16,6 +16,7 @@ module Api
               preview: article[:description].truncate(46, sperator: ' '),
               url: article[:url],
               cover: article[:image],
+              source: article[:source][:name],
               created_at: article[:publishedAt]
             }
           end
