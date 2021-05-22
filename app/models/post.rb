@@ -16,6 +16,7 @@ class Post < ApplicationRecord
   private
 
   HUMAN_AVERAGE_WORDS_READ_PER_MINUTE = 250.0
+  # source: https://irisreading.com/what-is-the-average-reading-speed/
 
   def word_count
     content.split(' ').size.to_f
