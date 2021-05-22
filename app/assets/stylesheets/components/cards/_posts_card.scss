@@ -28,8 +28,11 @@
   margin-top: 8px;
 }
 
-.card-post .card-post-infos {
+.card-post .card-post-infos  {
   color: black;
   padding: 16px;
+  a {
+    text-decoration: none!important;
+  }
 
 }

@@ -5,4 +5,4 @@
     .card-post-infos
       %h2= post.title
       %p= post.preview
-      %p= "by: #{post.author_name }"
+      %p= link_to "by: #{post.author_name}", user_path(post.author)
