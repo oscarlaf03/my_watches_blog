@@ -9,4 +9,17 @@ class Post < ApplicationRecord
     author.name if author
   end
 
+  def estimated_reading_time_in_minutes
+    word_count / HUMAN_AVERAGE_WORDS_READ_PER_MINUTE
+  end
+
+  private
+
+  HUMAN_AVERAGE_WORDS_READ_PER_MINUTE = 250.0
+
+  def word_count
+    content.split(' ').size.to_f
+  end
+
+  
 end
