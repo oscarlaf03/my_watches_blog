@@ -1,26 +1,23 @@
 %p#notice= notice
 
-
 .container.article-container
   - image_url = @post.cover_key ? cloudinary_url(@post.cover_key) : sample_watch_image
   .banner(style= "background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('#{image_url}');")
 
   %h1.post-title= @post.title
 
-
-
   .post-info
     .data
-      .by
+      .by(onclick="location.href='#{user_path(@post.author)}';")
         .author-avatar
           = image_tag @post.author.avatar_image_url, class: 'post-avatar'
         .author-names
           %span.by-line-author
-            = @post.author_name 
+            = @post.author_name
           .article-dateline
             = @post.created_at.strftime("%b %d, %Y")
       .post-analytics
-        #{icon('fas', 'eye')} : #{@post.views}  
+        #{icon('fas', 'eye')} : #{@post.views}
         #{icon('fas', 'clock')} #{@post.estimated_reading_time_in_minutes} minutes read
 
   - if author_buttons?(@post)
