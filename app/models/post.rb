@@ -5,7 +5,7 @@ class Post < ApplicationRecord
 
 
   def cover_key
-    cover.attachment.blob.key if cover.attached?
+    cover.key if cover.attached?
   end
 
   def preview

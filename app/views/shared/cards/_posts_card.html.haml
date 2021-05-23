@@ -1,8 +1,22 @@
 
+-# %a(href="#{post_path(post)}" style="text-decoration: none;")
+-#   .card-post
+-#     %img(src="#{post.cover.present? ? post.cover : sample_watch_image}")
+-#     .card-post-infos
+-#       %h2= post.title
+-#       %p= post.preview
+-#       %p= link_to "by: #{post.author_name}", user_path(post.author)
+
+
 %a(href="#{post_path(post)}" style="text-decoration: none;")
-  .card-post
-    %img(src="#{post.cover.present? ? post.cover : sample_watch_image}")
-    .card-post-infos
-      %h2= post.title
-      %p= post.preview
-      %p= link_to "by: #{post.author_name}", user_path(post.author)
+  .article
+    .article_hero
+      .article_hero_image
+    .article_info
+      %h3.article_title= post.title
+      .article_deck
+        %p= post.preview
+      .article_meta
+        %span by:
+        = post.author_name
+

@@ -1,3 +1,56 @@
+.article{
+  span {
+    font-family: Portrait Inline,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  border-top: 0;
+  padding-top: 0;
+  margin-bottom: 28px;
+  .article_hero {
+    float: right;
+    width: 60%;
+    .article_hero_image {
+      height: 0;
+      padding-bottom: 48%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+  .article_info {
+    margin-right: 60%;
+    padding-right: 20px;
+    .article_title {
+      font-size: 2.375em;
+      margin: 0 0 20px;
+      color: #010101;
+      font-family: Portrait,serif;
+      font-style: normal;
+      font-weight: 500;
+      -webkit-font-smoothing: antialiased;
+    }
+    .article_deck {
+      font-size: 1.125em;
+      line-height: 1.2em;
+      font-family: Portrait Text,serif;
+      font-style: normal;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+    .article_meta {
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      font-size: .6875em;
+
+    }
+  }
+}
+
+
+
 .card-post {
   overflow: hidden;
   height: 120px;
