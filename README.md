@@ -6,7 +6,7 @@ explain the features of the app
 --[ ] pagination: posts, users
 --[ ] edit in place
 --[X] pundit
---[ ] WYSIWYG
+--[X] WYSIWYG
 --[ ]bookmarks
 --[ ]likes
 --[ ]follow
