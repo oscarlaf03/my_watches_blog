@@ -1,25 +1,24 @@
 %p#notice= notice
 
-= cloudinary_url(@post.cover_key)
-= cl_image_tag(@post.cover_key)
--# = blob.name
 
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Views:
-  = @post.reload.views
+.container.article-container
+  - image_url = @post.cover_key ? cloudinary_url(@post.cover_key) : sample_watch_image
+  .banner(style= "background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('#{image_url}');")
 
-%p
-  %b Content:
-  = @post.content
-%p
-  %b Cover:
-  = @post.cover
-%p
-  %b Author:
-  = @post.author_name
+  %h1.post-title= @post.title
+
+  .post-info
+    .data
+    .by
+      .author-avatar
+        = image_tag @post.author.avatar_image_url, id: 'post-avatar'
+      .author-name
+        %p= @post.author_name
+
+
+  .article-text
+    =@post.content
+
 
 = link_to 'Edit', edit_post_path(@post)
 

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  include CloudinaryHelper
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -20,6 +21,10 @@ class User < ApplicationRecord
 
   def increment_profile_views_by_one
     self.update(profile_views: self.profile_views + 1)
+  end
+
+  def avatar_image_url
+    avatar.attached? ? cloudinary_url(avatar.key) : "https://cdn3.iconfinder.com/data/icons/communication-232/384/Account_circle-512.png"
   end
 
 

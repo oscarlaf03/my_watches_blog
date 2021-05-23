@@ -1,5 +1,10 @@
 module ApplicationHelper
 
+
+  def sample_avatar_image_url
+    "https://cdn3.iconfinder.com/data/icons/communication-232/384/Account_circle-512.png"
+  end
+
   def sample_watch_image
     %w[
         https://images.pexels.com/photos/47856/rolex-wrist-watch-clock-gmt-47856.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
