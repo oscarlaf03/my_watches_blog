@@ -1,4 +1,9 @@
 %h2 This is User page for #{@user.name}
 %h3 Profile views: #{@user.reload.profile_views}
 
+- if @user.posts.present?
+  %h4 Other posts by #{@user.name}
+  = render @user.posts
+
+
 

@@ -1,4 +1,7 @@
-# TODO
+
+# Heroku link
+https://my-watches-blog.herokuapp.com/
+## TODO
 explain the features of the app
 
 --[X] api remote posts

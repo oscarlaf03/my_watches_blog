@@ -8,12 +8,12 @@
       %li.nav-item
         = link_to 'Posts', posts_path, class: "nav-link"
       %li.nav-item
-        = link_to 'Sponsor Posts', sponsors_posts_path, class: "nav-link"
+        = link_to 'Sponsor\'s Posts', sponsors_posts_path, class: "nav-link"
       %li.nav-item
-        = link_to 'Write a Post', new_post_path, class: "nav-link"
+        = link_to "#{icon('fas','pen-fancy')} Write".html_safe, new_post_path, class: "btn btn-white"
       - if user_signed_in?
         %li.nav-item.active
-          = link_to "Home", "#", class: "nav-link"
+          = link_to "My posts", user_path(current_user), class: "nav-link"
         %li.nav-item
           = link_to "Messages", "#", class: "nav-link"
         %li.nav-item.dropdown
