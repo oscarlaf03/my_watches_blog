@@ -29,6 +29,7 @@ gem "pundit"
 gem "figaro"
 
 gem 'httparty'
+gem 'cloudinary'
 
 
 # Use Active Storage variant

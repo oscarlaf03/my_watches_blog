@@ -12,7 +12,7 @@
       = f.text_field :title
     .field
       = f.label :cover
-      = f.text_field :cover
+      = f.file_field :cover, direct_upload: true
     .form-group.form-rich-text-area
       .field
         = f.rich_text_area :content

@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :handle, presence: true, uniqueness: true, handle: true, length: {in: 3..19}
   validates :first_name, presence: true
   validates :last_name, presence: true
+  has_one_attached  :avatar
 
   has_many :posts
 

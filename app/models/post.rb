@@ -1,7 +1,12 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: "User", foreign_key: 'user_id'
+  has_one_attached  :cover
   has_rich_text :content
 
+
+  def cover_key
+    cover.attachment.blob.key if cover.attached?
+  end
 
   def preview
     content.body.to_plain_text.truncate(46, sperator: ' ')
