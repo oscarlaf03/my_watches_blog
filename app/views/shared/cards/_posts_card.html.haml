@@ -1,22 +1,9 @@
 
--# %a(href="#{post_path(post)}" style="text-decoration: none;")
--#   .card-post
--#     %img(src="#{post.cover.present? ? post.cover : sample_watch_image}")
--#     .card-post-infos
--#       %h2= post.title
--#       %p= post.preview
--#       %p= link_to "by: #{post.author_name}", user_path(post.author)
-
-
 %a(href="#{post_path(post)}" style="text-decoration: none;")
-  .article
-    .article_hero
-      .article_hero_image
-    .article_info
-      %h3.article_title= post.title
-      .article_deck
-        %p= post.preview
-      .article_meta
-        %span by:
-        = post.author_name
-
+  .card-post
+    .card-post-infos
+      %h2= post.title
+      %p= post.preview
+      %p by: #{post.author_name}
+    - image_url =  post.cover_key ?  cloudinary_url(post.cover_key) : sample_watch_image
+    %img(src="#{image_url}")

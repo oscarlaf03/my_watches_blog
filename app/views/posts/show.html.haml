@@ -1,4 +1,6 @@
 %p#notice= notice
+
+= cloudinary_url(@post.cover_key)
 = cl_image_tag(@post.cover_key)
 
 %p

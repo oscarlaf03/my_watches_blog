@@ -1,13 +1,22 @@
+
+// TODO remove or use this
 .article{
+  border-top: 0;
+  padding-top: 0;
+  margin-bottom: 28px;
+  content: "";
+  display: table;
+  clear: both;
+  display: block;
+
+  -webkit-text-size-adjust: 100%
+
   span {
     font-family: Portrait Inline,sans-serif;
     font-style: normal;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
   }
-  border-top: 0;
-  padding-top: 0;
-  margin-bottom: 28px;
   .article_hero {
     float: right;
     width: 60%;
@@ -22,6 +31,7 @@
   .article_info {
     margin-right: 60%;
     padding-right: 20px;
+    display: block;
     .article_title {
       font-size: 2.375em;
       margin: 0 0 20px;
@@ -53,18 +63,20 @@
 
 .card-post {
   overflow: hidden;
-  height: 120px;
+  height: 220px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin:2%;
+  justify-content: space-between;
 }
 
 .card-post img {
   height: 100%;
-  width: 120px;
+  width: 60%;
   object-fit: cover;
+  float:right;
 }
 
 .card-post h2 {
@@ -82,10 +94,6 @@
 }
 
 .card-post .card-post-infos  {
-  a {
-    text-decoration: none!important;
-  }
-  color: black!important;
+  color: black;
   padding: 16px;
-
 }
