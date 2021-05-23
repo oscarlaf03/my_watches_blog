@@ -7,7 +7,7 @@
   font-size: 3.25em;
 }
 
-#post-avatar {
+.post-avatar {
   display: inline-block;
   width: 36px;
   height: 36px;
@@ -16,12 +16,40 @@
   border-radius: 50%;
 }
 
+
+  .article-dateline{
+    color: #999;
+    font-size: .75em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+
+.post-analytics{
+  flex-shrink: 0;
+  margin: 0 16px;
+
+}
+
+.author-buttons{
+  margin:1% 1% 1% 0%;
+  padding:1% 1% 1% 0;
+}
+
+
+.author-names{
+  flex-grow: 1;
+  .by-line-author {
+    display: inline-block;
+  }
+}
+
 .post-info{
   float: left;
   width: 100%;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
-  .data{
+  .data{    
     align-items: center;
     justify-content: flex-end;
     display: flex;
@@ -33,11 +61,36 @@
       .author-avatar{
         flex-shrink: 0;
         margin-right: 8px;
-        
-      }
-      .author-name{
-        flex-grow: 1;
       }
     }
   }
+}
+
+
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  z-index: 99;
+  
+}
+
+
+.article-text{
+  font-family: 'PT Serif', serif;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  margin: 30px 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5em;
+  // font-size: 1.5em;
+  color: #333;
+  font-size: 1.4125em;
+  position: relative;
 }

@@ -1,8 +1,9 @@
 module ApplicationHelper
 
 
-  def sample_avatar_image_url
-    "https://cdn3.iconfinder.com/data/icons/communication-232/384/Account_circle-512.png"
+  def author_buttons?(post)
+    current_user.present? ? post.author == current_user : false
+
   end
 
   def sample_watch_image

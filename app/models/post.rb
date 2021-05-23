@@ -16,7 +16,7 @@ class Post < ApplicationRecord
   end
 
   def estimated_reading_time_in_minutes
-    word_count / HUMAN_AVERAGE_WORDS_READ_PER_MINUTE
+    ((word_count / HUMAN_AVERAGE_WORDS_READ_PER_MINUTE) + 0.5).round
   end
 
   def increment_views_by_one
@@ -29,7 +29,7 @@ class Post < ApplicationRecord
   # source: https://irisreading.com/what-is-the-average-reading-speed/
 
   def word_count
-    content.split(' ').size.to_f
+    content.body.to_plain_text.split(' ').size.to_f
   end
 
 end
