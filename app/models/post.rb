@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   belongs_to :author, class_name: "User", foreign_key: 'user_id'
   has_one_attached  :cover
   has_rich_text :content
+  # self.all.with_rich_text_content_and_embeds
 
 
   def cover_key
