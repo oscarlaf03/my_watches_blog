@@ -6,7 +6,7 @@ explain the features of the app
 
 --[X] api remote posts
 --[ ] infinite scroll
---[ ] pagination: posts, users
+--[X] pagination: posts, users
 --[ ] edit in place
 --[X] images, storage and cloudinary
 --[X] pundit

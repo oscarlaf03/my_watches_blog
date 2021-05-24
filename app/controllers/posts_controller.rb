@@ -3,7 +3,9 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = policy_scope(Post)
+    # @pagy, @records = pagy(Product.some_scope)
+
+    @pagy, @posts = pagy(policy_scope(Post))
   end
 
   # GET /posts/1 or /posts/1.json

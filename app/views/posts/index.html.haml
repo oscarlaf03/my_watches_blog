@@ -1,5 +1,6 @@
 
 .container.posts-container
   %h1 Exclusive articles from other watch entusiasts
-  %h2= link_to 'Visit our Sponsored Posts Page', sponsors_posts_path
+  = link_to 'Go to our Sponsor\'s posts page', sponsors_posts_path, class: 'btn btn-white'
   = render @posts
+  = pagy_bootstrap_nav(@pagy).html_safe
