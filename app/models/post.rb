@@ -11,6 +11,10 @@ class Post < ApplicationRecord
     content.body.to_plain_text.truncate(46, sperator: ' ')
   end
 
+  def created_at_formatted
+    created_at.strftime("%b %d, %Y")
+  end
+
   def author_name
     author.name if author
   end

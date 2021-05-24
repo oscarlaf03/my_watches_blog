@@ -15,9 +15,9 @@
           %span.by-line-author
             = @post.author_name
           .article-dateline
-            = @post.created_at.strftime("%b %d, %Y")
+            = @post.created_at_formatted
       .post-analytics
-        #{icon('fas', 'eye')} : #{@post.views}
+        #{icon('fas', 'eye')} #{@post.views}
         #{icon('fas', 'clock')} #{@post.estimated_reading_time_in_minutes} minutes read
 
   - if author_buttons?(@post)

@@ -4,6 +4,7 @@
     .card-post-infos
       %h2= post.title
       %p= post.preview
-      %p by: #{post.author_name}
+      %p By: #{post.author_name}
+      %p On: #{post.created_at_formatted}  #{icon('fas', 'eye')}  #{post.views}  #{icon('fas', 'clock')} #{post.estimated_reading_time_in_minutes} minutes read
     - image_url =  post.cover_key ?  cloudinary_url(post.cover_key) : sample_watch_image
     %img(src="#{image_url}")
