@@ -61,6 +61,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    authorize @destroy
+    @post.destroy
+  end
+
   # DELETE /posts/1 or /posts/1.json
   def destroy
     authorize @post
