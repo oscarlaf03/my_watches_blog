@@ -4,7 +4,7 @@ class HandleValidator < ActiveModel::EachValidator
       record.errors.add attribute, (options[:message] || 'Your handle cannot include any special characters')
     end
 
-    if value.include?(" ")
+    if value.present? && value.include?(" ")
       record.errors.add attribute, (options[:message] || 'Your handle cnnot include any spaces')
     end
 

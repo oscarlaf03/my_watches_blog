@@ -40,6 +40,11 @@ RSpec.describe User, type: :model do
       expect(new_user).not_to be_valid
     end
 
+    it "should reject user with an invalid email address" do
+      user = build(:user,email:"NOT_A_VALID_EMAIL_ADDRESS")
+      expect(user).not_to be_valid
+    end
+
   end
 
 
