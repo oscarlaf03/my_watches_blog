@@ -11,7 +11,10 @@ require("trix")
 require("@rails/actiontext")
 require("@rails/activestorage").start()
 
+
 import "../trix-editor-overrides"
+
+require("controllers")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

@@ -3,9 +3,14 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    # @pagy, @records = pagy(Product.some_scope)
-
     @pagy, @posts = pagy(policy_scope(Post))
+
+    respond_to do |format|
+      format.html
+      format.json {
+        render json: {entries: render_to_string(partial: 'posts', formats:[:html]), pagination: view_context.pagy_bootstrap_nav(@pagy)}
+      }
+    end
   end
 
   # GET /posts/1 or /posts/1.json

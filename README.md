@@ -5,7 +5,7 @@ https://my-watches-blog.herokuapp.com/
 explain the features of the app
 
 --[X] api remote posts
---[ ] infinite scroll
+--[X] infinite scroll
 --[X] pagination: posts, users
 --[ ] edit in place
 --[X] images, storage and cloudinary
