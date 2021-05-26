@@ -1,6 +1,11 @@
+# Welcome to my blog platform about watches
 
-# Heroku link
-https://my-watches-blog.herokuapp.com/
+Welcome to my blog platform about watches, the main goal is to bring people together to share articles and insights about watches
+
+## You can the hosted beta version through this public link
+  https://my-watches-blog.herokuapp.com/
+
+## Main features 
 ## TODO
 explain the features of the app
 
