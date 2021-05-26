@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     authorize @user
     @user.increment_profile_views_by_one
+    @pagy, @posts = pagy(@user.posts)
   end
 
   def edit
