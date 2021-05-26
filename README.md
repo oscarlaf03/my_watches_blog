@@ -2,7 +2,7 @@
 
 Welcome to my blog platform about watches, the main goal is to bring people together to share articles and insights about watches
 
-## You can the hosted beta version through this public link
+## You can check out the hosted beta version through this public link
   https://my-watches-blog.herokuapp.com/
 
 ## Main features:
