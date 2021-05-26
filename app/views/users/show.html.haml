@@ -9,6 +9,7 @@
 
   - if @posts.present?
     = render partial: 'posts/posts'
+    = render @posts
     = pagy_bootstrap_nav(@pagy).html_safe
   - elsif current_user == @user
     %h4 your page is too quite, attract viewers by creating your first post
