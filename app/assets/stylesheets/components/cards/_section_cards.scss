@@ -1,0 +1,21 @@
+.top-section {
+  background: linear-gradient(to right, #150a35, #0e4f5a);
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  margin-left: 40px;
+  color:whitesmoke;
+  border-radius: 15px;
+}
+
+
+.photo-round {
+  border-radius: 150px;
+  width:300px;
+  height: 300px;
+}
+
+.invert-filter{
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}

@@ -1,6 +1,10 @@
 module ApplicationHelper
   include Pagy::Frontend
 
+  def date_formatted(date)
+    date.strftime("%b %d, %Y")
+  end
+
   def logo_image_url
     # "https://i.pinimg.com/originals/9d/16/87/9d1687fe53247d0da876e4bff2e3ce64.png"
     # "https://miro.medium.com/max/850/0*qMxqLXCiZjqpp2Is.jpg"
