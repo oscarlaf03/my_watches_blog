@@ -1,5 +1,8 @@
 .container.posts-container
-  %h1 Checkout some of our sponsors external content
+  %h1 Enjoy of our sponsors external content
+
+  = link_to 'Go to our exclusive posts page', posts_path	, class: 'btn btn-white'
+
   - @remote_posts.each do |post|
     = render partial: "shared/cards/remote_post_card", locals: {post: post}
 
