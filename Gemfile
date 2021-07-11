@@ -45,6 +45,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'factory_bot_rails'
 gem 'pagy'
+gem 'react-rails'
 
 
 group :development, :test do  gem 'pry-byebug'
