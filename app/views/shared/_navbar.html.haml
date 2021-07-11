@@ -23,4 +23,5 @@
             = link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item btn btn-white"
       - else
         %li.nav-item
+          = link_to "Test page", new_page_path, class: "btn btn-white"
           = link_to "Login", new_user_session_path, class: "btn btn-white"
